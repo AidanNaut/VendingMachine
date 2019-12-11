@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<html>
+	<head>
+		<title>My Web Project</title>
+		<link href="css/bootstrap.css" rel="Stylesheet">
+	</head>
+	
+	<style>
+	#headerdiv {
+		text-align: center;
+		padding-top: 10px; 
+		margin-left: 10px; 
+		margin-right: 10px;
+	}
+
+	.card 
+	{
+		padding-bottom: 10px;
+		margin: 10px; 
+		overflow:hidden; 
+		position:relative;
+		text-align: center;
+  		border-radius: 15px;
+		box-shadow: 0 9px #999;
+	}
+	.cardSettings {
+		width: 33%;
+		min-height: 250px;
+		min-width: 200px;
+	}
+
+	.card:hover
+	{
+		background-color: gray;
+	}
+
+	.card:active
+	{
+		background-color: red;
+		box-shadow: 0 5px #666;
+  		transform: translateY(4px);
+	}
+
+	.btn-secondary
+	{
+		width: 100%;
+	}
+	.noselect 
+	{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	</style>
+
+	<body>
+		<div id="headerdiv">
+			<h1>Vending Machine</h1>
+		</div>
+
+		<hr/>
+		
+		<div class="container-fluid">
+			<div class="container-fluid float-left" style="width: 70%; padding-left: 5px;" id="itemButtons">
+				
+			</div>
+			<div class="container float-right" style="width: 30%" id="infoPanel">
+
+				<div class="container" id="coinUI">
+					<div style="text-align: center;">
+						<h2>Total $ In</h2>
+					</div>
+					<div class="input-group mx-auto pb-1" style="width: 175px;">
+						<input type="text" class="form-control text-center" name="money" id="money" placeholder="" aria-label="" value="0.00" disabled>
+					</div>
+					<div class="row pb-1">
+						<div class="col-6" >
+							<a name="addDollar" id="addDollar" class="btn btn-secondary" href="#" role="button">Add Dollar</a>
+						</div>
+						<div class="col-6">
+							<a name="addQuarter" id="addQuarter" class="btn btn-secondary" href="#" role="button">Add Quarter</a>
+						</div>
+					</div>
+					<div class="row pb-1">
+						<div class="col-6">
+							<a name="addDime" id="addDime" class="btn btn-secondary" href="#" role="button">Add Dime</a>
+						</div>
+						<div class="col-6">
+							<a name="addNickel" id="addNickel" class="btn btn-secondary" href="#" role="button">Add Nickel</a>
+						</div>
+					</div>
+				</div>
+
+				<hr/>
+
+				<div class="container" id="messageUI">
+					<div style="text-align: center;">
+						<h2>Messages</h2>
+					</div>
+					<div class="pb-2">
+						<input type="text" class="form-control text-center" name="messageOutput" id="messageOutput" placeholder="" aria-label="" value="First Pass" disabled>
+					</div>
+					<div class="row pb-2">
+						<label class="col-2 align-self-end" for="itemNumber">Item:</label>
+						<div class="col-10">
+							<input class="form-control" type="text" name="itemNumber" id="itemNumber" disabled>
+						</div>
+					</div>
+					<div class="text-center">
+						<button class="btn btn-primary w-100" type="button" id="purchaseButton" aria-label="">Make Purchase</button>  
+					</div>
+				</div>
+
+				<hr/>
+
+				<div class="container" id="changeUI">
+					<div class="text-center pb-1">
+						<h2>Change</h2>
+					</div>
+				
+					<div class="text-center pb-3">
+						<input type="text" class="form-control text-center" name="changeOutput" id="changeOutput" placeholder="" aria-label="" value="No change current" disabled>
+					</div>
+				
+					<div class="text-center">
+						<a name="change" id="change" class="btn btn-primary w-75" href="#" role="button">Change Return</a>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.4.1.min.js"></script>
+		
+		<script src="js/home.js"></script>
+	</body>
+	
+</html>
